@@ -1,1 +1,15 @@
-<h1>Test</h1>
+<div style="display: flex; flex-direction: column">
+  <span style="display: flex; width: 400px; justify-content: space-around">
+    <p><strong>Item</strong></p>
+    <p><strong>Category</strong></p>
+    <p><strong>Price</strong></p>
+  </span>
+  <div
+    *ngFor="let item of menuItems"
+    style="display: flex; width: 400px; justify-content: space-evenly"
+  >
+    <p>{{ item.name }}</p>
+    <p>{{ item.category }}</p>
+    <p>{{ item.price | currency }}</p>
+  </div>
+</div>
